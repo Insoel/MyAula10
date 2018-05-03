@@ -31,6 +31,11 @@
             Value = value;
         }
 
+        public override string ToString()
+        {
+            return $"Gun has {baseWeight} weight, bullets have {bulletWeight} weight, and there is {NumberOfBullets} bullets, their value is {Value}";
+        }
+
         /// <summary> Dispara a arma </summary>
         public void Shoot()
         {

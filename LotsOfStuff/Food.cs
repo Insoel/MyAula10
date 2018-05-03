@@ -35,5 +35,10 @@
             Weight = weight;
         }
 
+        public override string ToString()
+        {
+            return $"The food has {days} days, it's a {Type} and weighs {Weight}.";
+        }
+
     }
 }
