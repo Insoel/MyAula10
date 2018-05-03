@@ -3,8 +3,40 @@
 namespace Aula10
 {
     /// <summary>Classe que representa uma mochila ou saco que contem itens</summary>
-    public class Bag
+    public class Bag : IStuff
     {
+        public float Value
+        {
+            get
+            {
+                float total = 0;
+                foreach (IStuff thing in stuff)
+                {
+                    if (thing != null)
+                    {
+                        total += thing.Value;
+                    }
+                }
+                return total;
+            }
+        }
+
+        public float Weight
+        {
+            get
+            {
+                float total = 0;
+                foreach (IStuff thing in stuff)
+                {
+                    if (thing != null)
+                    {
+                        total += thing.Weight;
+                    }
+                }
+                return total;
+            }
+        }
+
         /// <summary>Array que contém os itens da mochila</summary>
         private IStuff[] stuff;
 
